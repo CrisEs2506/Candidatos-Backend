@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryColumn, ManyToOne } from "typeorm";
+import { Entity, Column, PrimaryColumn, ManyToOne, JoinColumn } from "typeorm";
 import { TipoDoc } from "./tipoDocs.entity"
 
 @Entity({ name: 'Candidato' })
@@ -21,6 +21,7 @@ export class Candidato {
     @Column()
     idTipoDocFK: string
 
-    @ManyToOne(() => TipoDoc, tipoDoc => tipoDoc.usuarios)
-    tipoDoc: TipoDoc
+    @ManyToOne(() => TipoDoc, { cascade: true })
+    @JoinColumn({ name: "idTipoDocFK" })
+    tipoDoc: TipoDoc;
 }

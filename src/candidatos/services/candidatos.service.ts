@@ -4,7 +4,6 @@ import { Repository } from 'typeorm';
 
 import { Candidato } from '../entities/candidatos.entity';
 import { CreateCandidatoDto } from '../dto/createCandidato.dto';
-import { TipoDoc } from '../entities/tipoDocs.entity';
 import { TipoDocsService } from './tipoDocs.service';
 
 @Injectable()

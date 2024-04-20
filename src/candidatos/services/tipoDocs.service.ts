@@ -31,7 +31,7 @@ export class TipoDocsService {
     async getTipoDoc(idTipoDoc: string) {
         const tipoDocFound = await this.tipoDocRepository.findOne({
             where: {
-                idTipoDoc,
+                idTipoDoc
             }
         });
 
