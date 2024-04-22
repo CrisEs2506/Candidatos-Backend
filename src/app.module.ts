@@ -12,9 +12,9 @@ import { CandidatosModule } from './candidatos/candidatos.module';
       type: "oracle", //Database type 
       host: "localhost", //Database host
       port: 1521, //Database port
-      username: "admin", //Database username
+      username: "crisDev", //Database username
       password: "admin", //Database password
-      database: 'CandidatosDB', //Database name
+      database: 'CandidatosBD', //Database name
       sid: "XE", //SID (Service Identifier) for Oracle database
       entities: [__dirname + '/**/*.entity{.ts,.js}'], //Entities de NestJS .entity.ts para mapear
       synchronize: true, // Auto-create database tables

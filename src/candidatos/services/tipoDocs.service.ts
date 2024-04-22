@@ -12,7 +12,7 @@ export class TipoDocsService {
     async createTipoDoc(tipoDoc: CreateTipoDoc) {
         const tipoDocFound = await this.tipoDocRepository.findOne({
             where: {
-                idTipoDoc: tipoDoc.idTipoDoc
+                IDTIPODOC: tipoDoc.IDTIPODOC
             }
         })
 
@@ -28,10 +28,10 @@ export class TipoDocsService {
         return this.tipoDocRepository.find()
     }
 
-    async getTipoDoc(idTipoDoc: string) {
+    async getTipoDoc(IDTIPODOC: string) {
         const tipoDocFound = await this.tipoDocRepository.findOne({
             where: {
-                idTipoDoc
+                IDTIPODOC
             }
         });
 

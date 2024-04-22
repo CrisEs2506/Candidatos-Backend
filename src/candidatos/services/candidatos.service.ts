@@ -14,13 +14,13 @@ export class CandidatosService {
     ) {}
 
     async createCandidato(candidato: CreateCandidatoDto) {
-        const tipoDocFound = await this.tipoDocsService.getTipoDoc(candidato.idTipoDocFK)
+        const tipoDocFound = await this.tipoDocsService.getTipoDoc(candidato.IDTIPODOCFK)
 
         if (!tipoDocFound) return new HttpException('Tipo de documento no encontrado.', HttpStatus.NOT_FOUND)
 
         const candidatoFound = await this.candidatoRepository.findOne({
             where: {
-                usuario: candidato.usuario
+                USUARIO: candidato.USUARIO
             }
         })
 

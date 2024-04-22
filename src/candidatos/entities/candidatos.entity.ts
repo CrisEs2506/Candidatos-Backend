@@ -1,27 +1,27 @@
 import { Entity, Column, PrimaryColumn, ManyToOne, JoinColumn } from "typeorm";
 import { TipoDoc } from "./tipoDocs.entity"
 
-@Entity({ name: 'Candidato' })
+@Entity({ name: 'CANDIDATO' })
 export class Candidato {
     @PrimaryColumn({ unique: true })
-    usuario: string
+    USUARIO: string
     
     @Column()
-    nombre: string
+    NOMBRE: string
     
     @Column()
-    apellido: string
+    APELLIDO: string
     
     @Column({ type: 'date' })
-    fechaNac: Date
+    FECHANAC: Date
     
     @Column()
-    nDoc: number
+    NDOC: number
 
     @Column()
-    idTipoDocFK: string
+    IDTIPODOCFK: string
 
     @ManyToOne(() => TipoDoc, { cascade: true })
-    @JoinColumn({ name: "idTipoDocFK" })
-    tipoDoc: TipoDoc;
+    @JoinColumn({ name: "IDTIPODOCFK" })
+    TIPODOC: TipoDoc;
 }

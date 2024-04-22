@@ -14,7 +14,7 @@ export class TipoDocsController {
         return this.tipoDocService.getTipoDocs();
     } 
     
-    //GET /tipoDoc/:id
+    //GET /tipoDocs/:id
     @Get(':id')
     getTipoDoc(@Param('id') id: string) {
         return this.tipoDocService.getTipoDoc(id);

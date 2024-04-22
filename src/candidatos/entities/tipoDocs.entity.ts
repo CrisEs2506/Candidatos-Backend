@@ -1,14 +1,14 @@
 import { Entity, Column, PrimaryColumn, OneToMany } from "typeorm";
 import { Candidato } from "./candidatos.entity";
 
-@Entity({ name: 'TipoDoc' })
+@Entity({ name: 'TIPODOC' })
 export class TipoDoc {
     @PrimaryColumn({ unique: true })
-    idTipoDoc: string
+    IDTIPODOC: string
 
     @Column()
-    descTipoDoc: string
+    DESCTIPODOC: string
 
-    @OneToMany(() => Candidato, candidato => candidato.tipoDoc)
-    usuarios: Candidato[]
+    @OneToMany(() => Candidato, candidato => candidato.TIPODOC)
+    USUARIOS: Candidato[]
 }
